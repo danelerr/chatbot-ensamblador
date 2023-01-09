@@ -38,10 +38,8 @@ async function obtenerRespuestaBot(mensaje) {
   let url = new URLSearchParams({ texto: mensaje });
   //consumimos la api
   url = dominio+"mensaje?" + url.toString();
-  console.log(url);
   let respuesta = await fetch(url);
   respuesta = respuesta.json();
-  alert('hola');
   
   await respuesta.then((r) => (respuesta = r.mensaje));
 
