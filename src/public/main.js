@@ -1,9 +1,6 @@
 // Logica para interactuar con el frontend
 
-const dominio = 'chatbot-ensamblador-production.up.railway.app/';
-//'http://192.168.0.3:3000/';
-//'http://localhost:3000/';
-
+const dominio = 'https://chatbot-ensamblador-production.up.railway.app/';
 
 const contenedorMensajes = document.getElementById('respuestas');
 
@@ -39,14 +36,13 @@ async function obtenerRespuestaBot(mensaje) {
   mensaje = mensaje.toLowerCase();
   //creamos una url para pedirle cosas a la api
   let url = new URLSearchParams({ texto: mensaje });
-
   //consumimos la api
   url = dominio+"mensaje?" + url.toString();
   console.log(url);
   let respuesta = await fetch(url);
-
   respuesta = respuesta.json();
-
+  alert('hola');
+  
   await respuesta.then((r) => (respuesta = r.mensaje));
 
   return respuesta;
