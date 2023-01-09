@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #aaa;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body {
+    height: 100vh;
+    background-color: #f8f8f8;
+     /* background-color: rgb(167, 167, 167); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+    width: 40%;
+    margin: auto;
+    background-color: #faf9ed;
+}
+
+header {
+    background-color: #FA7559;
+    color: whitesmoke;
+    padding: 20px; 
+    font-size: 20px;
+}
+
+
+#respuestas {
+    overflow: auto;
+    flex: 1;
+}
+
+.mensajes-usuario {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
+    align-items: center;
+    white-space: pre-wrap;
+    word-break: break-all; 
+}
+
+.mensajes-bot {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 20px;
+    background-color: white;
+    white-space: pre-wrap;
+    word-break: break-all; 
+}
+
+.chat-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(209, 209, 209);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 2px 2px 20px rgb(0 0 0 / 40%);
+    position: inherit;
+    flex-shrink: 0;
+}
+.chat-area input {
+    display: block;
+    flex: 1;
+    border-radius: 10px;
+    margin: 5px;
+    height: 100%;
+    outline: none;
+    font-size: 19px;
+    border: 2px solid #ccc; 
+    color: #555;
+    background-color: white;
+}
+
+.chat-area button {
+    border: 0px;
+    height: 100%;
+    width: 10%;
+    margin-right: 5px;
+    margin-left: 1px;
+    border-radius: 10px;
+    background-color: #FA7559;
+    color: white;
+}
+.chat-area button:hover {
+    background-color: blueviolet;
+    transition: 0.5s ease;
+}
+
+#span-bot {
+    color: white;
+    margin: 15px;
+    background-color: blueviolet;
+}
+
+#span-usuario {
+    color: white;
+    margin: 15px;
+    background-color:  #FA7559;
+}
+
+
+/* RESPONSIVE DESING */
+
+@media (max-width: 1360px) {
+    #container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 850px) {
+    #container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    * {
+        font-size: 15px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    #container {
+        width: 100%;
+    }
+}
+
+
+
+/* PARA TELEFONOS EN HORIZONTAL */
+@media (max-height: 450px) {
+    * {
+        font-size: 15px;
+    }
+
+    #container {
+        width: 100%;
+    }
+}
