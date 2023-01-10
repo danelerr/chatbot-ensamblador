@@ -1,7 +1,12 @@
+
+//aplicacion
 import express from 'express';
 import { PORT } from './config.js';
 import rutas from './rutas.js';
+//borrar
 import cors from 'cors';
+
+
 const app = express();
 
 app.use(express.static('src/public'));

@@ -4,6 +4,7 @@ export function getRespuesta(mensaje) {
   return respuesta;
 }
 
+
 function probabilidadDeMensajes(mensaje, palabrasConocidas, palabrasRequeridas = []) {
   let certezaDeMensaje = 0;
   let cumplepalabrasRequeridas = true;
@@ -30,7 +31,6 @@ function probabilidadDeMensajes(mensaje, palabrasConocidas, palabrasRequeridas =
 
 function evaluarRespuestas(mensaje) {
   const mayorProbabilidad = {};
-  
 
   /**
    * 
@@ -44,8 +44,11 @@ function evaluarRespuestas(mensaje) {
 
   crearRespuesta('hola', ['hola', 'klk', 'saludos', 'buenas']);
   crearRespuesta('La dirección del segment .bss es 0x407030', ['direccion', 'segment', 'bss', 'buenas'], ['bss']);
-  crearRespuesta('La dirección del segment .data es 0x403010', ['direccion', 'segment', 'data', 'buenas'], ['data']);
-  crearRespuesta('La dirección del segment .bss es 0x401550', ['direccion', 'segment', 'text', 'buenas'], ['text']);
+  crearRespuesta('La dirección del segment .data es 0x403010', ['direccion', 'segment', 'data'], ['data']);
+  crearRespuesta('La dirección del segment .bss es 0x401550', ['direccion', 'segment', 'text'], ['text']);
+  crearRespuesta('respuesta de <strong>ejemplo </strong>', ['ejemplo']);
+
+
   const mejorRespuesta = Object.keys(mayorProbabilidad).reduce((a, b) => mayorProbabilidad[a] > mayorProbabilidad[b] ? a : b);
   if (mayorProbabilidad[mejorRespuesta] < 1) {
     return sinRespuesta();

@@ -1,3 +1,5 @@
+//configutacion para el servidor
+
 import {config} from 'dotenv';
 
 config();

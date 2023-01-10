@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *::-webkit-scrollbar {
-    width: 0px;
+    width: 8px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background: #aaa;
+    background:#FA7559;;
+    border-radius: 20px;
+    box-shadow: inherit;
 }
 
 *::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgb(188, 188, 188);
 }
 
 body {
@@ -38,11 +40,68 @@ body {
     background-color: #faf9ed;
 }
 
-header {
+.nav {
     background-color: #FA7559;
     color: whitesmoke;
+    height: 80px;
     padding: 20px; 
-    font-size: 20px;
+    /* font-size: 20px; */
+}
+
+#span-nav {
+    color: black;
+    font-size: 1.03em;
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+
+.nav-menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;  
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav-item::after {
+    content: "";
+    display: block;
+    background: black;;
+    width: 100%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .3s;
+}
+
+.nav-item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav-label, .nav-input {
+    display: none;
+}
+.nav-container {
+    display: flex;
+    height: 100%; 
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -108,14 +167,14 @@ header {
     color: white;
 }
 .chat-area button:hover {
-    background-color: blueviolet;
+    background-color: #000;
     transition: 0.5s ease;
 }
 
 #span-bot {
     color: white;
     margin: 15px;
-    background-color: blueviolet;
+    background-color: #000;
 }
 
 #span-usuario {
@@ -127,7 +186,7 @@ header {
 
 /* RESPONSIVE DESING */
 
-@media (max-width: 1360px) {
+@media (max-width: 1700px) {
     #container {
         width: 60%;
     }
@@ -137,11 +196,45 @@ header {
     #container {
         width: 80%;
     }
+    .nav-label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+    .nav-item::after {
+        background-color: #FA7559;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: black;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        clip-path: circle(0 at 100% 0);
+        transition: clip-path 0.5s ease-in-out;
+    }
+
+    .nav-input:checked + .nav-menu {
+        
+        clip-path: circle(141.4% at 100% 0);
+    }
+
 }
 
 @media (max-width: 500px) {
     * {
         font-size: 15px;
+    }
+
+    *::-webkit-scrollbar {
+        width: 5px;
     }
 
     header {
@@ -152,6 +245,7 @@ header {
     #container {
         width: 100%;
     }
+
 }
 
 
@@ -161,8 +255,9 @@ header {
     * {
         font-size: 15px;
     }
-
+    
     #container {
         width: 100%;
     }
+
 }
