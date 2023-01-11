@@ -16,10 +16,35 @@
 body {
     height: 100vh;
     background-color: #f8f8f8;
-     /* background-color: rgb(167, 167, 167); */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#modal {
+    /* white-space: pre-wrap;
+    word-break: break-all;  */
+    max-width: 40%;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 3em;
+}
+
+
+
+#modal::backdrop {
+    background-color: rgba(0,0,0,0.55);
+}
+
+#cerrar-modal {
+    margin-top: 20px;
+    border: 0px;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #FA7559;
+    color: white;
 }
 
 * {
@@ -44,6 +69,7 @@ body {
     background-color: #FA7559;
     color: whitesmoke;
     height: 80px;
+    width: 100%; 
     padding: 20px; 
     /* font-size: 20px; */
 }
@@ -67,7 +93,12 @@ body {
 
 .nav-item {
     color: white;
+    text-align: left;
+    border: 0px;
+    font-size: 16px;
     text-decoration: none;  
+    background-color: #FA7559;
+    font-weight: bold;
     --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 
@@ -190,12 +221,13 @@ a {
     #container {
         width: 60%;
     }
+    #modal {
+        max-width: 60%;
+    }
 }
 
-@media (max-width: 850px) {
-    #container {
-        width: 80%;
-    }
+
+@media (max-width: 1020px) {
     .nav-label {
         display: block;
         cursor: pointer;
@@ -203,6 +235,8 @@ a {
 
     .nav-item {
         font-size: 20px;
+        background-color: #000;
+        font-weight: normal;
     }
     .nav-item::after {
         background-color: #FA7559;
@@ -225,7 +259,17 @@ a {
         
         clip-path: circle(141.4% at 100% 0);
     }
+    #modal {
+        max-width: 90%;
+    }
 
+}
+
+
+@media (max-width: 850px) {
+    #container {
+        width: 80%;
+    }
 }
 
 @media (max-width: 500px) {

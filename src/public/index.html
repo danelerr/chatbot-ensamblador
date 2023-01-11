@@ -15,6 +15,10 @@
 </head>
 
 <body>
+    <dialog id="modal"> 
+        <p id="texto-modal"></p>
+        <button id="cerrar-modal"> cerrar </button>
+    </dialog>
     <div id="container">
         <nav class="nav">
             <div class="nav-container">
@@ -30,17 +34,16 @@
                 <input class="nav-input" type="checkbox" id="menu">
                 
                 <div class="nav-menu">
-                    <a href="#" class="nav-item"> Limpiar el chat </a>
-                    <a href="#" class="nav-item"> Acerca de </a>
-                    <a href="#" class="nav-item"> Desarrolladores </a>
-                    <a href="#" class="nav-item"> Contacto </a>
+                    <a href="/" class="nav-item"> Limpiar el chat </a>
+                    <button id="btn-acerca" class="nav-item"> Acerca de </button>
+                    <button id="btn-desarrolladores" class="nav-item"> Desarrolladores </button>
+                    <button id="btn-contacto" class="nav-item"> Contacto </button>
 
                 </div>
 
             </div>
         </nav>
         <div id="respuestas">
-
         </div>
         <div class="chat-area">
             <input type="text" value="" placeholder="escribe tu pregunta" name="texto" id="txtPregunta" autofocus>
@@ -48,7 +51,6 @@
         </div>
     </div>
 </body>
-
 <script src="./main.js"></script>
 
 </html>
