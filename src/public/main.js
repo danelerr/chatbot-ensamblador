@@ -1,7 +1,7 @@
 // Logica para interactuar con el frontend
 
-// const dominio = 'https://chatbot-ensamblador-production.up.railway.app/';
-const dominio = 'http://192.168.0.2:3000/'
+const dominio = 'https://chatbot-ensamblador-production.up.railway.app/';
+// const dominio = 'http://192.168.0.2:3000/'
 
 const contenedorMensajes = document.getElementById('respuestas');
 
