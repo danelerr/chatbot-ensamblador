@@ -1,5 +1,7 @@
+import { respuestas } from "./respuestas.js";
+
 export function getRespuesta(mensaje) {
-  const splitMensaje = mensaje.toLowerCase().split(/\s|[,:;.?!-_]\s*/);
+  const splitMensaje = mensaje.toLowerCase().split(/[\s¿?,!@$#%&*]+/);
   const respuesta = evaluarRespuestas(splitMensaje);
   return respuesta;
 }
@@ -42,11 +44,9 @@ function evaluarRespuestas(mensaje) {
     mayorProbabilidad[respuestaBot] = probabilidadDeMensajes(mensaje, palabrasConocidas, requiredpalabras);
   }
 
-  crearRespuesta('hola', ['hola', 'klk', 'saludos', 'buenas']);
-  crearRespuesta('La dirección del segment .bss es 0x407030', ['direccion', 'segment', 'bss', 'buenas'], ['bss']);
-  crearRespuesta('La dirección del segment .data es 0x403010', ['direccion', 'segment', 'data'], ['data']);
-  crearRespuesta('La dirección del segment .bss es 0x401550', ['direccion', 'segment', 'text'], ['text']);
-  crearRespuesta('respuesta de <strong>ejemplo </strong>', ['ejemplo']);
+  for (const respuesta of respuestas) {
+    crearRespuesta(respuesta.respuesta, respuesta.palabrasConocidas, respuesta.palabrasRequeridas);
+  }
 
 
   const mejorRespuesta = Object.keys(mayorProbabilidad).reduce((a, b) => mayorProbabilidad[a] > mayorProbabilidad[b] ? a : b);

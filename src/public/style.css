@@ -144,6 +144,7 @@ a {
 .mensajes-usuario {
     padding-top: 20px;
     padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 20px;
     border-bottom: 1px solid #555;
     align-items: center;
@@ -154,6 +155,7 @@ a {
 .mensajes-bot {
     padding-top: 20px;
     padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 20px;
     border-bottom: 1px solid #555;
     padding-bottom: 20px;
@@ -212,6 +214,12 @@ a {
     color: white;
     margin: 15px;
     background-color:  #FA7559;
+}
+
+.span-code {
+    color: white;
+    background-color: rgb(60, 60, 60);
+    font-family: monospace, monospace;
 }
 
 
