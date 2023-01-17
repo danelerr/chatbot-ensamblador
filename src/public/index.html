@@ -19,12 +19,12 @@
         <p id="texto-modal"></p>
         <button id="cerrar-modal"> cerrar </button>
     </dialog>
-    <div id="container">
+    <div class="container">
         <nav class="nav">
             <div class="nav-container">
                 <a href="/">
                   
-                    <h1 class="nav-logo">  <strong class="nav-logo" style="font-size: 20px;">max <span id="span-nav"> bot</span>; </strong> </h1>
+                    <h1 class="nav-logo">  <strong class="nav-logo" style="font-size: 20px;">max <span class="span-nav"> bot</span>; </strong> </h1>
                 </a>
                 <label for="menu" class="nav-label">
                     <span class="material-symbols-outlined" style="font-size: 40px;">
@@ -38,6 +38,7 @@
                     <button id="btn-acerca" class="nav-item"> Acerca de </button>
                     <button id="btn-desarrolladores" class="nav-item"> Desarrolladores </button>
                     <button id="btn-contacto" class="nav-item"> Contacto </button>
+                    <button id="btn-dark" class="nav-item"> Dark mode </button>
 
                 </div>
 
@@ -46,11 +47,11 @@
         <div id="respuestas">
         </div>
         <div class="chat-area">
-            <input type="text" value="" placeholder="escribe tu pregunta" name="texto" id="txtPregunta" autofocus>
+            <input type="text" value="" placeholder="escribe tu pregunta" name="texto" id="txtPregunta" class="txt-pregunta" autofocus>
             <button onclick="chatear()" class="material-symbols-sharp"> send</button>
         </div>
     </div>
 </body>
 <script src="./main.js"></script>
-
+<script src="./funcionality.js"></script>
 </html>

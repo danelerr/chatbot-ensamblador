@@ -15,7 +15,7 @@ export const respuestas = [
     palabrasRequeridas: ["data"],
   },
   {
-    respuesta: "La dirección del segment .bss es 0x401550",
+    respuesta: "La dirección del segment .text es 0x401550",
     palabrasConocidas: ["direccion", "segment", "text"],
     palabrasRequeridas: ["text"],
   },
