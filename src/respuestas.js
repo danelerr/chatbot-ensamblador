@@ -199,7 +199,7 @@ SF: Signed Flag, Si un resultado es negativo, se activa y se pone en 1, caso con
 ZF: Zero Flag, Si un resultado es 0, se pone 1, caso contrario se mantiene en 0<br>
 OF: OverFlow Es cuando nos pasamos del límite de un registro espacio de memoria, por decir a un registro de 8bits le queremos meter un valor más grande del que puede almacenar, por ejemplo 300 y ahí se activa la Overfow.
     `,
-    palabrasConocidas: ["banderas", "flag", "como", "que"],
+    palabrasConocidas: ["banderas", "flag", "como"],
     palabrasRequeridas: [],
   },
   {
