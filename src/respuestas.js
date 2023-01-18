@@ -202,5 +202,20 @@ OF: OverFlow Es cuando nos pasamos del límite de un registro espacio de memoria
     palabrasConocidas: ["banderas", "flag", "como", "que"],
     palabrasRequeridas: [],
   },
+  {
+    respuesta: `mov es una inscrucción que sirve para guardar un valor dentro de otro
+Se usa de la siguiente forma:
+<pre class="span-code">
+mov op1, op2
+</pre>
+    Luego de eso, se ejecuta op1 = op2
+
+    Puedes verlo como una instrucción c++: op1 = op2;
+
+    O también interpretarlo como que, "muevr a op1 el valor de op2
+`,
+    palabrasConocidas: ["mov", "igual", "ensamblador", "como", "mover"],
+    palabrasRequeridas: [],
+  }
 ];
     
